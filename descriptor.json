@@ -13,7 +13,8 @@
            "display": {
                "name": "App Token",
                "description" : "App token provided by pushover",
-               "appPropertySupport": true
+               "appPropertySupport": true,
+               "type": "password"
            }
            
        },
@@ -24,7 +25,8 @@
             "display": {
                 "name": "Group Token",
                 "description" : "Group token provided by pushover",
-                "appPropertySupport": true
+                "appPropertySupport": true,
+                "type": "password"
             }
         },
         {
