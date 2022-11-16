@@ -183,3 +183,41 @@ func TestActivePushoverBadTokens(t *testing.T) {
 	assert.Nil(t, err)
 	assert.Equal(t, 400, ctx.output["status"])
 }
+
+func TestMissingAppToken(t *testing.T) {
+	_, err := New(newInitContext(map[string]interface{}{
+		"groupToken": "test2",
+		"active":     true,
+	}))
+	assert.Error(t, err)
+}
+
+func TestMissingGroupToken(t *testing.T) {
+	_, err := New(newInitContext(map[string]interface{}{
+		"appToken": "test1",
+		"active":   true,
+	}))
+	assert.Error(t, err)
+}
+
+func TestMissingActiveField(t *testing.T) {
+	_, err := New(newInitContext(map[string]interface{}{
+		"appToken":   "test1",
+		"groupToken": "test2",
+	}))
+	assert.Error(t, err)
+}
+
+func TestNoActivityContext(t *testing.T) {
+	act, err := New(newInitContext(map[string]interface{}{
+		"appToken":   os.Getenv("APP"),
+		"groupToken": os.Getenv("GROUP"),
+		"active":     true,
+	}))
+	assert.Nil(t, err)
+
+	ctx := newActivityContext(map[string]interface{}{})
+	_, err = act.Eval(ctx)
+	assert.Nil(t, err)
+	assert.Equal(t, 204, ctx.output["status"])
+}
