@@ -10,19 +10,32 @@
            "name": "appToken",
            "type": "string",
            "required": true,
-           "description" : "app token provided by pushover"
+           "display": {
+               "name": "App Token",
+               "description" : "App token provided by pushover",
+               "appPropertySupport": true
+           }
+           
        },
        {
             "name": "groupToken",
             "type": "string",
             "required": true,
-            "description" : "group/user token provided by pushover"
+            "display": {
+                "name": "Group Token",
+                "description" : "Group token provided by pushover",
+                "appPropertySupport": true
+            }
         },
         {
             "name": "active",
             "type": "boolean",
             "required": true,
-            "description" : "does not send request if set to false"
+            "display": {
+                "name": "Active",
+                "description" : "Request will not be sent if set to false",
+                "appPropertySupport": true
+            }
         }
     ],
     "inputs": [
