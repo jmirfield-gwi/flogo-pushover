@@ -7,26 +7,31 @@
     "description": "Send pushover requests",
     "settings": [
        {
-           "name": "App Token",
+           "name": "appToken",
            "type": "string",
            "required": true
        },
        {
-        "name": "Group Token",
-        "type": "string",
-        "required": true
+            "name": "groupToken",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "active",
+            "type": "boolean",
+            "required": true
         }
     ],
     "inputs": [
         {
-            "name": "Message",
+            "name": "message",
             "type": "string",
             "required": true
         }
     ],
     "outputs": [
         {
-            "name": "Status",
+            "name": "status",
             "type": "number"
         }
     ]
