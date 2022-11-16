@@ -1,0 +1,33 @@
+{
+    "name": "pushover-activity",
+    "version": "1.0.0",
+    "author": "Justin Mirfield",
+    "type": "flogo:activity",
+    "title": "Pushover Activity",
+    "description": "Send pushover requests",
+    "settings": [
+       {
+           "name": "App Token",
+           "type": "string",
+           "required": true
+       },
+       {
+        "name": "Group Token",
+        "type": "string",
+        "required": true
+        }
+    ],
+    "inputs": [
+        {
+            "name": "Message",
+            "type": "string",
+            "required": true
+        }
+    ],
+    "outputs": [
+        {
+            "name": "Status",
+            "type": "number"
+        }
+    ]
+}
