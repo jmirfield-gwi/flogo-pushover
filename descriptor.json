@@ -9,17 +9,20 @@
        {
            "name": "appToken",
            "type": "string",
-           "required": true
+           "required": true,
+           "description" : "app token provided by pushover"
        },
        {
             "name": "groupToken",
             "type": "string",
-            "required": true
+            "required": true,
+            "description" : "group/user token provided by pushover"
         },
         {
             "name": "active",
             "type": "boolean",
-            "required": true
+            "required": true,
+            "description" : "does not send request if set to false"
         }
     ],
     "inputs": [
