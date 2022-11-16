@@ -20,7 +20,7 @@ The available response `outputs` are as follows:
 
 | Name   |  Type   | Description   |
 |:-----------|:--------|:--------------|
-| status | number | Returns 200 if message was sent successfully. \n204 is if message is empty or if active is set to false. 400 is if request is bad. |
+| status | number | Returns 200 if message was sent successfully, 204 is if message is empty or if active is set to false, or 400 is if request is bad |
 
 ## Testing
 
